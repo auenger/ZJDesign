@@ -1,0 +1,9 @@
+{
+  "name": "zhuojiang-assembly-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"predev": "node scripts/prepare-icons.mjs", "dev": "vite --host 0.0.0.0", "prebuild": "node scripts/prepare-icons.mjs", "build": "vite build", "preview": "vite preview --host 0.0.0.0", "test": "node tests/smoke.mjs"},
+  "dependencies": {"three": "^0.180.0", "@phosphor-icons/web": "^2.1.2"},
+  "devDependencies": {"vite": "^7.1.0", "@playwright/test": "^1.55.0"}
+}
