@@ -1,5 +1,6 @@
 import * as T from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { createVikingPart } from './viking.js';
 
 export const categories = [
   { id: 'head', name: '头部', icon: 'user-circle', en: 'HEAD' },
@@ -13,12 +14,12 @@ export const categories = [
 ];
 export const catalog = {
   head: [ ['北境战士', '编织长须'], ['东方武将', '髯须怒目'], ['铁面骑士', '全覆式面甲'] ],
-  body: [ ['兽皮胸甲', '北境 · 交叉皮带'], ['将军战甲', '东方 · 层叠甲片'], ['重装板甲', '骑士 · 胸前纹章'] ],
-  arms: [ ['符文护臂', '环形金属护腕'], ['龙鳞臂甲', '层叠鳞甲'], ['骑士臂甲', '重装护手'] ],
+  body: [ ['兽皮胸甲', '北境 · 斜襟鳞裙'], ['将军战甲', '东方 · 层叠甲片'], ['重装板甲', '骑士 · 胸前纹章'] ],
+  arms: [ ['符文护臂', '雕纹 · 肌肉塑形'], ['龙鳞臂甲', '层叠鳞甲'], ['骑士臂甲', '重装护手'] ],
   legs: [ ['北境战靴', '兽毛 · 铜扣'], ['武将裙甲', '鳞甲 · 护膝'], ['重装护腿', '板甲 · 战靴'] ],
   hat: [ ['断角战盔', '北境 · 双角'], ['将军冠冕', '东方 · 红缨'], ['骑士头盔', '骑士 · 羽饰'], ['不佩戴', '展示头部造型'] ],
-  armor: [ ['符文肩甲', '北境 · 雕纹'], ['猛兽肩甲', '东方 · 兽面'], ['重装肩甲', '骑士 · 铆钉'], ['不佩戴', '轻装上阵'] ],
-  weapon: [ ['维京战斧', '双面斧刃'], ['长柄战戟', '东方 · 月牙刃'], ['骑士长剑', '十字剑格'], ['不装备', '空手姿态'] ],
+  armor: [ ['符文肩甲', '雕纹肩甲 · 兽毛'], ['猛兽肩甲', '东方 · 兽面'], ['重装肩甲', '骑士 · 铆钉'], ['不佩戴', '轻装上阵'] ],
+  weapon: [ ['维京战斧', '单刃战斧 · 浮雕'], ['长柄战戟', '东方 · 月牙刃'], ['骑士长剑', '十字剑格'], ['不装备', '空手姿态'] ],
   shield: [ ['符文圆盾', '北境 · 金属盾脐'], ['龙纹方盾', '东方 · 浮雕'], ['纹章鸢盾', '骑士 · 尖底'], ['不装备', '空手姿态'] ],
 };
 export const palettes = { bronze: ['#89604a', '#a8aca3', '#342f2a'], silver: ['#879398', '#c2c8c3', '#30383b'], iron: ['#414c4e', '#96794f', '#242729'] };
@@ -52,6 +53,7 @@ function emblem(g,m,x,y,z,size=.27) {
   ball(g,m.main,[x,y,z],[size*.22,size*.22,.06]);
 }
 export function createPart(slot,index=0,palette='bronze') {
+  if(index===0)return createVikingPart(slot,palette);
   const g=new T.Group();g.userData.slot=slot;
   if(index===3)return g;
   const m=mats(palette);
