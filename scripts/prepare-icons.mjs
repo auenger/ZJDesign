@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
 
 const css = readFileSync('node_modules/@phosphor-icons/web/src/regular/style.css', 'utf8');
-const main = readFileSync('src/main.js', 'utf8');
+const main = readFileSync('src/main.js', 'utf8') + readFileSync('src/model-lab.js', 'utf8');
 const parts = readFileSync('src/parts.js', 'utf8');
 const names = new Set([
   ...[...main.matchAll(/icon\('([^']+)'\)/g)].map(match => match[1]),

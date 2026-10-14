@@ -1,0 +1,23 @@
+LEGO Minifigure - Cycles
+Original model and texture: Rioforce (2013)
+Original publication: https://rioforce.wordpress.com/2013/07/30/download-a-lego-minifigure/
+Author-provided source archive: https://github.com/rioforce/rioforce/raw/master/rioforce_lego_minifigure_cycles.zip
+Current BlendSwap listing: https://blendswap.com/blend/9954
+
+License: Creative Commons Attribution 3.0 Unported
+https://creativecommons.org/licenses/by/3.0/
+The original archive ALSO states: "THIS BLEND IS MARKED AS FAN ART YOU ARE NOT ALLOWED TO USE IT COMMERCIALLY."
+Keep this restriction with the assets. These files are included only for a non-commercial technical model study, not as commercial product assets. See the unmodified BLENDSWAP_LICENSE.txt alongside this file.
+LEGO and the Minifigure are trademarks of the LEGO Group. This study is not affiliated with or endorsed by the LEGO Group.
+
+Adaptation for the Zhuojiang model laboratory:
+- Converted the source Blender scene into static glTF 2.0 binary (GLB).
+- Used the rig's rest pose and excluded the original floor, lights, camera and rig.
+- Grouped loose mesh islands into ten independent physical components.
+- Evaluated subdivision at levels 1 and 2; no replacement procedural human geometry.
+- Rebuilt legacy Cycles shaders as PBR, preserving the original UV atlas and cap color.
+- Applied Draco geometry compression. Original texture remains embedded in GLB.
+- Viewer provides optional metal shading, wireframe, and exploded presentation.
+
+Conversion recipe: scripts/convert-minifigure.py in the project repository.
+File sizes, triangle counts and SHA-256 hashes: manifest.json.

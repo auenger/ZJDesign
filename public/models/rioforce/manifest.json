@@ -1,0 +1,24 @@
+{
+  "author": "Rioforce",
+  "title": "LEGO Minifigure - Cycles",
+  "source": "https://rioforce.wordpress.com/2013/07/30/download-a-lego-minifigure/",
+  "license": "CC BY 3.0; original package additionally restricts Fan Art to non-commercial use",
+  "variants": {
+    "standard": {
+      "url": "/models/rioforce/minifigure-standard.glb",
+      "bytes": 365048,
+      "triangles": 65844,
+      "components": 10,
+      "subdivision": 1,
+      "sha256": "a8e28babb908479d747104ee30a38be0dd68850ff13ba7d2bf4f08a94809f06a"
+    },
+    "high": {
+      "url": "/models/rioforce/minifigure-high.glb",
+      "bytes": 907040,
+      "triangles": 263376,
+      "components": 10,
+      "subdivision": 2,
+      "sha256": "98c25c86e459f460b24127e60df41ee40a2a2319b6efff3016283b3ed988a7f6"
+    }
+  }
+}
